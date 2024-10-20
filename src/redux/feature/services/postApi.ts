@@ -1,29 +1,30 @@
+import { axiosBaseQuery } from "@/utlls/api";
 import { Post } from "@/utlls/types";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const postApi = createApi({
   reducerPath: "postApi",
-  baseQuery: fetchBaseQuery({
+  baseQuery: axiosBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com/",
   }),
   tagTypes: ["Posts", "Todos"],
   endpoints: (builder) => ({
     getAllPosts: builder.query<Post[], void>({
-      query: () => `posts`,
+      query: () => ({ url: `posts` }),
       providesTags: [{ type: "Posts", id: "LIST" }],
     }),
     getPostsById: builder.query<Post[], void>({
-      query: () => `posts`,
+      query: () => ({ url: `posts` }),
     }),
     deletePost: builder.mutation<any, { id: number }>({
-      query: ({ id }) => ({ method: "DELETE", url: `posts/${id}` }),
+      query: ({ id }) => ({ method: "delete", url: `posts/${id}` }),
       invalidatesTags: [{ type: "Posts", id: "LIST" }],
     }),
     updatePost: builder.mutation<any, Partial<Post>>({
       query: ({ id, ...patch }) => ({
-        method: "PATCH",
+        method: "patch",
         url: `posts/${id}`,
-        body: patch,
+        data: patch,
       }),
       invalidatesTags: [{ type: "Posts", id: "LIST" }],
     }),

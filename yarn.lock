@@ -3435,6 +3435,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.7.7":
+  version: 1.7.7
+  resolution: "axios@npm:1.7.7"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/4499efc89e86b0b49ffddc018798de05fab26e3bf57913818266be73279a6418c3ce8f9e934c7d2d707ab8c095e837fc6c90608fb7715b94d357720b5f568af7
+  languageName: node
+  linkType: hard
+
 "babel-core@npm:^7.0.0-bridge.0":
   version: 7.0.0-bridge.0
   resolution: "babel-core@npm:7.0.0-bridge.0"
@@ -5466,6 +5477,16 @@ __metadata:
   version: 0.248.1
   resolution: "flow-parser@npm:0.248.1"
   checksum: 10c0/f8f2dfbc06235527267fe6064c07014e9ba6dd44d6e5e89b2f82091b14c14c13523fd5d8bd6b1ca736bd3403773e9c2b8b95dc58703334dfe72a4bba722c95ad
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.9
+  resolution: "follow-redirects@npm:1.15.9"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10c0/5829165bd112c3c0e82be6c15b1a58fa9dcfaede3b3c54697a82fe4a62dd5ae5e8222956b448d2f98e331525f05d00404aba7d696de9e761ef6e42fdc780244f
   languageName: node
   linkType: hard
 
@@ -9017,6 +9038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
+  languageName: node
+  linkType: hard
+
 "psl@npm:^1.1.33":
   version: 1.9.0
   resolution: "psl@npm:1.9.0"
@@ -9712,6 +9740,7 @@ __metadata:
     "@types/jest": "npm:^29.5.12"
     "@types/react": "npm:~18.2.45"
     "@types/react-test-renderer": "npm:^18.0.7"
+    axios: "npm:^1.7.7"
     expo: "npm:~51.0.28"
     expo-constants: "npm:~16.0.2"
     expo-font: "npm:~12.0.9"
